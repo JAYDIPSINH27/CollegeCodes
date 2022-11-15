@@ -1,0 +1,20 @@
+
+geth init --datadir node1 genesis.json
+geth --datadir node1 --networkid 1234 --http --http.api "personal,eth,net,web3,txpool,miner" --allow-insecure-unlock --nodiscover console
+personal.newAccount()
+
+geth -verbosity 3 --datadir="./node2" --networkid 1234 --ipcdisable --port 30302 --authrpc.port 8552 console
+
+
+admin.nodeInfo.enode
+
+admin.addPeer(enode)
+eth.getBalance(eth.coinbase)
+miner.setEtherbase(web3.eth.accounts[0])
+miner.start()
+
+"enode://415176ea06e7dddb47dc3aa2137592a251f698322732d76535865dd8b0092c9563fa8b48c9142dcc11bad61a54f70412b802fa71897939433dbf67d577a194f6@157.32.108.220:30302"
+0xe5eaa0ecf5d42b48611f4dcc81862409281b3691
+0x4c4795248891c87a79031ae4431379397b861bbd
+
+
