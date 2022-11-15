@@ -5,9 +5,10 @@ personal.newAccount()
 
 geth -verbosity 3 --datadir="./node2" --networkid 1234 --ipcdisable --port 30302 --authrpc.port 8552 console
 
+npx kill-port 8080
 
 admin.nodeInfo.enode
-
+admin.peers
 admin.addPeer(enode)
 eth.getBalance(eth.coinbase)
 miner.setEtherbase(web3.eth.accounts[0])
@@ -18,3 +19,6 @@ miner.start()
 0x4c4795248891c87a79031ae4431379397b861bbd
 
 
+https://geth.ethereum.org/docs/interface/private-network
+
+miner.stop()
